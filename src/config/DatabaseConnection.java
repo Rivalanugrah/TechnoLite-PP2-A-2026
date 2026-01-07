@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
     // MAMP MySQL default port: 8889, password: root
-    private static final String URL = "jdbc:mysql://localhost:8889/perpustakaan_db";
+    private static final String URL = "jdbc:mysql://localhost:3306/perpustakaan_db";
     private static final String USER = "root";
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = "";
 
     // Create new connection each time to avoid stale connection issues
     public static Connection getConnection() {
