@@ -180,7 +180,7 @@ public class RegisterFrame extends JFrame {
         User user = new User(username, password, "user", nama, email);
         if (authController.register(user)) {
             JOptionPane.showMessageDialog(this,
-                    "Registrasi berhasil! 🎉\nSilakan login dengan akun baru Anda.",
+                    "Registrasi berhasil! Silakan login dengan akun baru Anda.",
                     "Sukses", JOptionPane.INFORMATION_MESSAGE);
             backToLogin();
         } else {

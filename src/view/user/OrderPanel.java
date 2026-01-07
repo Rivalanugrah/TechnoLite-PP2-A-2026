@@ -72,7 +72,7 @@ public class OrderPanel extends JPanel {
         titlePanel.add(lblTitle);
         titlePanel.add(lblOrderCount);
 
-        JButton btnRefresh = new JButton("🔄 Refresh");
+        JButton btnRefresh = new JButton("Refresh");
         btnRefresh.setBackground(PRIMARY_COLOR);
         btnRefresh.setForeground(Color.WHITE);
         btnRefresh.setFont(new Font("SansSerif", Font.BOLD, 11));
