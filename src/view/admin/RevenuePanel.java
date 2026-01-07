@@ -1,22 +1,21 @@
 package view.admin;
 
-import controller.OrderController;
 import controller.BukuController;
-import model.Order;
-import model.OrderDetail;
-import util.PDFExporter;
-
-import javax.swing.*;
-import javax.swing.border.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.JTableHeader;
+import controller.OrderController;
 import java.awt.*;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+import javax.swing.*;
+import javax.swing.border.*;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
+import model.Order;
+import model.OrderDetail;
+import util.PDFExporter;
 
 public class RevenuePanel extends JPanel {
     private JTable table;
@@ -283,11 +282,19 @@ public class RevenuePanel extends JPanel {
 
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Simpan Laporan PDF");
-        fileChooser.setSelectedFile(new java.io.File("laporan_peminjaman.txt"));
+        fileChooser.setSelectedFile(new java.io.File("laporan_peminjaman.pdf"));
+
+        // Add PDF filter
+        fileChooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("PDF Files (*.pdf)", "pdf"));
 
         int result = fileChooser.showSaveDialog(this);
         if (result == JFileChooser.APPROVE_OPTION) {
             String filePath = fileChooser.getSelectedFile().getAbsolutePath();
+
+            // Auto-append .pdf extension if not present
+            if (!filePath.toLowerCase().endsWith(".pdf")) {
+                filePath += ".pdf";
+            }
 
             if (PDFExporter.exportReport(currentOrders, filePath)) {
                 JOptionPane.showMessageDialog(this,
