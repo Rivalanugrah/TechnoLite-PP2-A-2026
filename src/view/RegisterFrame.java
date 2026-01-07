@@ -51,7 +51,7 @@ public class RegisterFrame extends JFrame {
                 BorderFactory.createEmptyBorder(35, 50, 35, 50)));
 
         // Icon & Title
-        JLabel lblIcon = new JLabel("📝", SwingConstants.CENTER);
+        JLabel lblIcon = new JLabel("", SwingConstants.CENTER);
         lblIcon.setFont(new Font("SansSerif", Font.PLAIN, 40));
         lblIcon.setAlignmentX(Component.CENTER_ALIGNMENT);
         cardPanel.add(lblIcon);
