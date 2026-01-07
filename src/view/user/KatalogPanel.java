@@ -252,7 +252,7 @@ public class KatalogPanel extends JPanel {
         borrowPanel.add(Box.createVerticalStrut(12));
 
         // Borrow button
-        JButton btnPinjam = new JButton("📖 Pinjam Sekarang");
+        JButton btnPinjam = new JButton("Pinjam Sekarang");
         btnPinjam.setBackground(SUCCESS_COLOR);
         btnPinjam.setForeground(Color.WHITE);
         btnPinjam.setFont(new Font("SansSerif", Font.BOLD, 12));
@@ -266,7 +266,7 @@ public class KatalogPanel extends JPanel {
         borrowPanel.add(Box.createVerticalStrut(8));
 
         // Refresh button
-        JButton btnRefresh = new JButton("🔄 Refresh");
+        JButton btnRefresh = new JButton("Refresh");
         btnRefresh.setBackground(PRIMARY_COLOR);
         btnRefresh.setForeground(Color.WHITE);
         btnRefresh.setFont(new Font("SansSerif", Font.BOLD, 11));

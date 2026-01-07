@@ -41,7 +41,7 @@ public class UserDashboard extends JFrame {
         JPanel leftHeader = new JPanel(new FlowLayout(FlowLayout.LEFT, 15, 0));
         leftHeader.setOpaque(false);
 
-        JLabel lblLogo = new JLabel("📚");
+        JLabel lblLogo = new JLabel("");
         lblLogo.setFont(new Font("SansSerif", Font.PLAIN, 28));
         lblLogo.setForeground(Color.WHITE);
 

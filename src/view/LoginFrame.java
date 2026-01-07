@@ -50,7 +50,7 @@ public class LoginFrame extends JFrame {
         cardPanel.setMaximumSize(new Dimension(360, 400));
 
         // Logo/Icon
-        JLabel lblIcon = new JLabel("📚", SwingConstants.CENTER);
+        JLabel lblIcon = new JLabel("", SwingConstants.CENTER);
         lblIcon.setFont(new Font("SansSerif", Font.PLAIN, 48));
         lblIcon.setAlignmentX(Component.CENTER_ALIGNMENT);
         cardPanel.add(lblIcon);
@@ -170,7 +170,7 @@ public class LoginFrame extends JFrame {
 
         if (user != null) {
             JOptionPane.showMessageDialog(this,
-                    "Selamat datang, " + user.getNama() + "! 👋",
+                    "Selamat datang, " + user.getNama() + "!",
                     "Login Berhasil", JOptionPane.INFORMATION_MESSAGE);
 
             if (user.isAdmin()) {
